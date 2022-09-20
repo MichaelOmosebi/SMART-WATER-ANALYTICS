@@ -29,7 +29,7 @@ For this repository, please refer to the following files:
 
 ||| Kindly ```fork``` the repo and upvote if you find helpful.
 
-![Fork Repo](resources/imgs/fork-repo.png)  
+![Fork Repo](Datasets/Fork_Repo.png)  
 
 To fork the repo, simply ensure that you are logged into your GitHub account, and then click on the 'fork' button at the top of this page as indicated within the figure above.
 
@@ -48,7 +48,7 @@ To do this, follow the steps below by running the given commands within a Git ba
  2. Clone the *forked* repo to your local machine.
 
  ```bash
- git clone https://github.com/{your-account-name}/classification-predict-streamlit-template.git
+ git clone https://github.com/{your-account-name}/smart-water-analytics-explore_ai_team4.git
  ```  
 
  3. Navigate to the base of the cloned repo, and start the Streamlit app.
@@ -63,11 +63,11 @@ To do this, follow the steps below by running the given commands within a Git ba
   You can now view your Streamlit app in your browser.
 
     Local URL: http://localhost:8501
-    Network URL: http://192.168.43.41:8501
+    Network URL: http://192.168.43.124:8501
 ```
 
 You should also be automatically directed to the base page of your web app. This should look something like:
 
-![Streamlit base page](resources/imgs/streamlit-base-splash-screen.png)
+![Streamlit base page](Datasets/ACEA_Welcome_Page.png)
 
 Thanks for interacting! Recommendations are welcome.
