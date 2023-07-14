@@ -6,6 +6,6 @@ matplotlib
 streamlit==1.11.1
 datetime
 wordcloud==1.8.1
-PIL
+pillow
 xgboost==1.5.2
 statsmodels==0.13.2
