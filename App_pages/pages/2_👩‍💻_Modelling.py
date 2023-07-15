@@ -222,7 +222,7 @@ elif selection == 'Bilancino (Lake)':
     Bilancino['month'] = pd.DatetimeIndex(Bilancino['Date']).month
     Bilancino['day'] = pd.DatetimeIndex(Bilancino['Date']).day
     Bilancino['day_of_year'] = pd.DatetimeIndex(Bilancino['Date']).dayofyear
-    Bilancino['week_of_year'] = pd.DatetimeIndex(Bilancino['Date']).weekofyear
+    Bilancino['week_of_year'] = pd.DatetimeIndex(Bilancino['Date']).isocalendar().week
     Bilancino['quarter'] = pd.DatetimeIndex(Bilancino['Date']).quarter
 
     Bilancino.set_index('Date', inplace = True)
