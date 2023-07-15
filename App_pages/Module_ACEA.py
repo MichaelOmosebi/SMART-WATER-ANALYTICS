@@ -200,7 +200,7 @@ def wrangle_amiata(filepath):
 
     #Interpolate to fill NaNs using the default method
     for i in df.columns:
-        df[i] = df[i].interpolate()
+        df[i] = df[i].interpolate(method='pad') #added method
 
     #Fill any possible remaining NaN rows with zeros
     df=df.fillna(0)
