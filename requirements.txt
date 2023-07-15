@@ -1,7 +1,7 @@
 seaborn
 openpyxl
 numpy==1.22.4
-pandas
+pandas==1.3
 joblib
 scikit-learn
 matplotlib
