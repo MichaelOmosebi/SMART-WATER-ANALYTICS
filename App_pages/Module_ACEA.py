@@ -349,7 +349,7 @@ def prep_target_bilancino(df, target='Flow_Rate'):
     #Split to training and test
     y = df[target_name].iloc[:,0] #Needed to convert the dataframe target to a Series
     X = df.drop(target_name, axis=1)
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=60)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=60)
     
     return X_train, X_test, y_train, y_test
 
