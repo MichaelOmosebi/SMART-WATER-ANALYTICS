@@ -30,7 +30,7 @@ if selection == 'Auser (Aquifer)':
 
     start=Ausers.Date[0]
     end=Ausers.Date[len(Ausers)-1]
-    Ausers['Date'] = pd.to_datetime(Ausers['Date'])
+    Ausers['Date'] = pd.to_datetime(Ausers['Date'], format='%d/%m/%Y')
     years=len(Ausers['Date'].dt.year.unique())
     st.write(f'The dataset contains observations taken from **{start}** to **{end}** covering **{years}** years.')
 
