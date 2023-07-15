@@ -12,7 +12,7 @@ from PIL import Image
 
 # Load your raw data
 Amiata_raw = pd.read_csv("Datasets/Water_Spring_Amiata.csv")
-Amiata = pd.read_excel("Datasets/Amiata_wrangled.xlsx")
+#Amiata = pd.read_excel("Datasets/Amiata_wrangled.xlsx")
 Arno = pd.read_csv("Datasets/River_Arno.csv")
 Bilancino = pd.read_csv("Datasets/Lake_Bilancino.csv")
 Ausers = pd.read_csv("Datasets/Aquifer_Auser.csv")
