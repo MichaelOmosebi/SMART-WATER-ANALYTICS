@@ -9,5 +9,5 @@ streamlit==1.11.1
 datetime
 wordcloud==1.8.1
 Pillow
-xgboost==1.6.1
+xgboost==1.5.2
 statsmodels==0.13.2
