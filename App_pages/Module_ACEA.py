@@ -183,7 +183,7 @@ def wrangle_amiata(filepath):
     df['month'] = pd.DatetimeIndex(df['Date']).month
     df['day'] = pd.DatetimeIndex(df['Date']).day
     df['day_of_year'] = pd.DatetimeIndex(df['Date']).dayofyear
-    df['week_of_year'] = pd.DatetimeIndex(df['Date']).weekofyear
+    #df['week_of_year'] = pd.DatetimeIndex(df['Date']).weekofyear
     df['quarter'] = pd.DatetimeIndex(df['Date']).quarter
     df['season'] = df['month'] % 12 // 3 + 1
     
