@@ -26,10 +26,10 @@ import Module_ACEA as MA
 
 
 # Wrangle the raw data using the defined functions
-Amiata = MA.wrangle_amiata("../Datasets/Water_Spring_Amiata.csv")
-Arno = MA.arno_wrangle("../Datasets/River_Arno.csv")
-Bilancino = pd.read_csv("../Datasets/Lake_Bilancino.csv").dropna()
-Ausers = MA.wrangle_auser("../Datasets/Aquifer_Auser.csv")
+Amiata = MA.wrangle_amiata("Datasets/Water_Spring_Amiata.csv")
+Arno = MA.arno_wrangle("Datasets/River_Arno.csv")
+Bilancino = pd.read_csv("Datasets/Lake_Bilancino.csv").dropna()
+Ausers = MA.wrangle_auser("Datasets/Aquifer_Auser.csv")
 
 
 options = ["Amiata(Spring)", "Arno (River)", "Bilancino (Lake)", "Auser (Aquifer)"]
@@ -61,9 +61,9 @@ if selection == 'Auser (Aquifer)':
         y_test = MA.prep_target_auser(Ausers, target=option)[3]
 
         #Loading the model
-        SAL_model = joblib.load(open(os.path.join("../Datasets/XGBoost_model_auser_SAL.pkl"),"rb"))
-        CoS_model = joblib.load(open(os.path.join("../Datasets/XGBoost_model_auser_CoS.pkl"),"rb"))
-        LT2_model = joblib.load(open(os.path.join("../Datasets/XGBoost_model_auser_LT2.pkl"),"rb"))
+        SAL_model = joblib.load(open(os.path.join("Datasets/XGBoost_model_auser_SAL.pkl"),"rb"))
+        CoS_model = joblib.load(open(os.path.join("Datasets/XGBoost_model_auser_CoS.pkl"),"rb"))
+        LT2_model = joblib.load(open(os.path.join("Datasets/XGBoost_model_auser_LT2.pkl"),"rb"))
         models = {'Groundwater_SAL': SAL_model,
                 'Groundwater_CoS': CoS_model, 
                 'Groundwater_LT2': LT2_model}
@@ -123,9 +123,9 @@ elif selection == 'Amiata(Spring)':
         y_test = MA.prep_target_amiata(Amiata, target=option)[3]
 
         #Loading the model
-        Arbure_model = joblib.load(open(os.path.join("../Datasets/forest_model_Amiata_Arbure.pkl"),"rb"))
-        Bugnano_model = joblib.load(open(os.path.join("../Datasets/forest_model_Amiata_Bugnano.pkl"),"rb"))
-        Ermicciolo_model = joblib.load(open(os.path.join("../Datasets/forest_model_Amiata_Ermicciolo.pkl"),"rb"))
+        Arbure_model = joblib.load(open(os.path.join("Datasets/forest_model_Amiata_Arbure.pkl"),"rb"))
+        Bugnano_model = joblib.load(open(os.path.join("Datasets/forest_model_Amiata_Bugnano.pkl"),"rb"))
+        Ermicciolo_model = joblib.load(open(os.path.join("Datasets/forest_model_Amiata_Ermicciolo.pkl"),"rb"))
         models = {'Arbure': Arbure_model,
                 'Bugnano': Bugnano_model, 
                 'Ermicciolo': Ermicciolo_model}
@@ -244,8 +244,8 @@ elif selection == 'Bilancino (Lake)':
         y_test = MA.prep_target_bilancino(Bilancino, target=option)[3]
 
         #Loading the model
-        FlowRate_model = joblib.load(open(os.path.join("../Datasets/XG_model_Bilancino_Flowrate.pkl"),"rb"))
-        LakeLevel_model = joblib.load(open(os.path.join("../Datasets/XG_model_Bilancino_level.pkl"),"rb"))
+        FlowRate_model = joblib.load(open(os.path.join("Datasets/XG_model_Bilancino_Flowrate.pkl"),"rb"))
+        LakeLevel_model = joblib.load(open(os.path.join("Datasets/XG_model_Bilancino_level.pkl"),"rb"))
         models = {'Flow_Rate': FlowRate_model,
                 'Lake_Level': LakeLevel_model}
         predictor = models.get(option)
