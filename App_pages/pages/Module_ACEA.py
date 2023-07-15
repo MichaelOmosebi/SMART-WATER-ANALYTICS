@@ -176,7 +176,7 @@ def wrangle_amiata(filepath):
     df = pd.read_csv(filepath)
     
     #Changing the Datetime column from object type
-    df.Date = pd.to_datetime(df.Date, format='%d/%m/%Y')
+    df.Date = pd.to_datetime(df['Date'], format='%d/%m/%Y')
 
     #Creating more time features
     df['year'] = pd.DatetimeIndex(df['Date']).year
