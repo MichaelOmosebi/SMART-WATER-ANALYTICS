@@ -54,7 +54,7 @@ elif selection == 'Amiata(Spring)':
     st.write("This aquifer is accessed through the **Ermicciolo**, **Arbure**, **Bugnano** and **Galleria Alta** springs. The levels and volumes of the four springs are influenced by the parameters: _pluviometry_, _sub-gradation_, _hydrometry_, _temperatures_ and drainage volumes.")
     start=Amiata_raw.Date[0]
     end=Amiata_raw.Date[len(Amiata_raw)-1]
-    Amiata_raw['Date'] = pd.to_datetime(Amiata_raw['Date'], format='"%d/%m/%Y"')
+    Amiata_raw['Date'] = pd.to_datetime(Amiata_raw['Date'], format='%d/%m/%Y')
     years=len(Amiata_raw['Date'].dt.year.unique())
     st.write(f'The dataset contains observations taken between **{start}** and **{end}**, covering **{years}** years.')
 
