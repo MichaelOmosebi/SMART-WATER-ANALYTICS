@@ -107,7 +107,7 @@ elif selection == 'Bilancino (Lake)':
 
     start=Bilancino.Date[0]
     end=Bilancino.Date[len(Bilancino)-1]
-    Bilancino['Date'] = pd.to_datetime(Bilancino['Date'])
+    Bilancino['Date'] = pd.to_datetime(Bilancino['Date'], format='%d/%m/%Y')
     years=len(Bilancino['Date'].dt.year.unique())
     st.write(f'The dataset contains observations taken from **{start}** to **{end}**, covering **{years}** years.')
 
