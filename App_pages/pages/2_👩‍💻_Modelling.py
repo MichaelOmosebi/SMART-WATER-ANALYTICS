@@ -215,7 +215,7 @@ elif selection == 'Bilancino (Lake)':
 
     st.write('## Dataset After Feature Engineering')
     Bilancino = Bilancino.dropna()
-    Bilancino.Date = pd.to_datetime(Bilancino.Date)
+    Bilancino.Date = pd.to_datetime(Bilancino['Date'], format='%d/%m/%Y')
 
     #Creating new date features
     Bilancino['year'] = pd.DatetimeIndex(Bilancino['Date']).year
