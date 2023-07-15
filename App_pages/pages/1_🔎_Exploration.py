@@ -81,7 +81,7 @@ elif selection == 'Arno (River)':
     st.write("The Arno is the second largest river in peninsular Italy and the main waterway in Tuscany and it  has a relatively torrential regime, due to the nature of the surrounding soils (marl and impermeable clays).")
     start=Arno.Date[0]
     end=Arno.Date[len(Arno)-1]
-    Arno['Date'] = pd.to_datetime(Arno['Date'])
+    Arno['Date'] = pd.to_datetime(Arno['Date'], format='%d/%m/%Y')
     years=len(Arno['Date'].dt.year.unique())
     st.write(f'The dataset contains observations taken from **{start}** to **{end}**, covering **{years}** years.')
 
