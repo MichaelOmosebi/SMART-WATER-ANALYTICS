@@ -15,7 +15,7 @@ st.write('The scope of this project was to show how viable it is to predict the 
 st.write(' ')
 st.write('')
 
-image = Image.open('../Datasets/Project_Flow.gif')
+image = Image.open('Datasets/Project_Flow.gif')
 st.image(image, caption='Project Timeline & Approach', use_column_width=True)
 
 st.info('Take Out')
