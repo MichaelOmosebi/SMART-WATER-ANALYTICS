@@ -12,8 +12,8 @@ def arno_wrangle(filepath):
     df['Date'] = pd.to_datetime(df['Date'], dayfirst=True)
 
     #Dropping Null value dominated years and fill left Nan rows
-    df.drop(df[df.Date < pd.to_datetime("01/01/2004", dayfirst=True)].index, inplace=True)
-    df.drop(df[df.Date > pd.to_datetime("01/07/2007", dayfirst=True)].index, inplace=True)
+    df.drop(df[df.Date < pd.to_datetime("01/01/2004", dayfirst=True)].index, inplace=True, format='%d/%m/%Y')
+    df.drop(df[df.Date > pd.to_datetime("01/07/2007", dayfirst=True)].index, inplace=True, format='%d/%m/%Y')
     df.fillna(0, inplace=True)
 
     #Setting date column as index
@@ -176,7 +176,7 @@ def wrangle_amiata(filepath):
     df = pd.read_csv(filepath)
     
     #Changing the Datetime column from object type
-    df.Date = pd.to_datetime(df.Date)
+    df.Date = pd.to_datetime(df.Date, format='%d/%m/%Y')
 
     #Creating more time features
     df['year'] = pd.DatetimeIndex(df['Date']).year
@@ -270,7 +270,7 @@ def wrangle_auser(filepath):
     df = pd.read_csv(filepath)
     
     #Changing the Datetime column from object type
-    df.Date = pd.to_datetime(df.Date)
+    df.Date = pd.to_datetime(df.Date, format='%d/%m/%Y')
 
     #Creating more time features
     df['year'] = pd.DatetimeIndex(df['Date']).year
