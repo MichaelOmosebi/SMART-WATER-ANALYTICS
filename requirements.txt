@@ -1,4 +1,5 @@
 seaborn
+openpyxl
 numpy==1.22.4
 pandas
 joblib
