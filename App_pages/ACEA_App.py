@@ -19,5 +19,5 @@ st.markdown('In this project we will focus on the **water sector** to help Acea 
 
 st.markdown('Different water bodies, each with unique characteristics, will be explored for this project. Each dataset provided represents a different kind of waterbody. As each waterbody is different from the other, the related features are also different.')
 
-#image = Image.open('Water Available.png')
-#st.image(image, use_column_width=False)
+image = Image.open('Water Available.png')
+st.image(image, use_column_width=False)
